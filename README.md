@@ -65,19 +65,22 @@ Today is not a Holiday
 
 ## Usage
 1. Clone this repository to your local machine:
-
-git clone https://github.com/khardiashab/G4_FSD_GradedCodingAssignment1_FOP.git
+   ```bash
+   git clone https://github.com/khardiashab/G4_FSD_GradedCodingAssignment1_FOP.git
 
 2. Compile the Java program:
-javac DepartmentDetails/src/com/fsd/group4/main/Main.java
+   ```bash 
+   javac DepartmentDetails/src/com/fsd/group4/main/Main.java
 
-3. Run the program:
-java DepartmentDetails.src.com.fsd.group4.main.Main
+4. Run the program:
+   ```bash 
+   java DepartmentDetails.src.com.fsd.group4.main.Main
 
 You should see the expected output printed to the console.
 
 ## Contributor
-https://github.com/khardiashab/
-https://github.com/yourusername/
-https://github.com/yourusername/
-https://github.com/yourusername/
+```bash
+   https://github.com/khardiashab/
+   https://github.com/yourusername/
+   https://github.com/yourusername/
+   https://github.com/yourusername/
