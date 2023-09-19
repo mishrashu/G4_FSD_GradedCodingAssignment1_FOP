@@ -9,7 +9,9 @@ public class TechDepartment extends SuperDepartment implements IGetTechStackInfo
    * getTodaysWork will return “ Complete coding of module 1”
    * getWorkDeadline will return “ Complete by EOD “
    * getTechStackInformation will return “core Java”
+   * 
    */
+
   @Override
   public String departmentName() {
     return "Tech Department ";

@@ -2,7 +2,7 @@ package com.fsd.group4.departments;
 
 import com.fsd.group4.departmentinterfaces.IDoActivity;
 
-public class HrDepartment extends SuperDepartment implements IDoActivity{
+public class HrDepartment extends SuperDepartment implements IDoActivity {
 
   /*
    * departmentName will return “ Hr Department “
@@ -11,6 +11,7 @@ public class HrDepartment extends SuperDepartment implements IDoActivity{
    * doActivity “team Lunch”
    * 
    */
+
   @Override
   public String departmentName() {
     return "Hr Department ";

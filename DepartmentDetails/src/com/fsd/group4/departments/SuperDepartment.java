@@ -1,8 +1,9 @@
 package com.fsd.group4.departments;
 
-import com.fsd.group4.departmentinterfaces.DepartmentUtilities;
+import com.fsd.group4.departmentinterfaces.IDepartmentUtilities;
 
-public class SuperDepartment implements DepartmentUtilities {
+public class SuperDepartment implements IDepartmentUtilities {
+
   /*
    * departmentName will return “ Super Department “
    * getTodaysWork will return “ No Work as of now”
@@ -18,7 +19,7 @@ public class SuperDepartment implements DepartmentUtilities {
 
   @Override
   public String getTodaysWork() {
-  return "No Work as of now";
+    return "No Work as of now";
   }
 
   @Override
@@ -28,7 +29,7 @@ public class SuperDepartment implements DepartmentUtilities {
 
   @Override
   public String isTodayAHoliday() {
-   return "Today is not a holiday";
+    return "Today is not a holiday";
   }
 
 }
