@@ -1,18 +1,19 @@
 package com.fsd.group4.main;
 
-import com.fsd.group4.departments.AdminDepartment;
-import com.fsd.group4.departments.HrDepartment;
-import com.fsd.group4.departments.SuperDepartment;
-import com.fsd.group4.departments.TechDepartment;
+import java.util.List;
+import java.util.ArrayList;
+import com.fsd.group4.departments.*;
 
 public class Main {
-  static void displayDepartment(SuperDepartment dep) {
-    System.out.println("Welcome to " + dep.departmentName());
+  
+  // Method to display the department name
+  static void displayDepartment(SuperDepartment department) {
+    String output = String.format("Welcome to %s", department.departmentName());
+    System.out.println(output);
   }
-
+  
   public static void main(String[] args) {
-
-    /*
+    /* 
      * Expected Output
      * 
      * Welcome to Admin Department
@@ -32,30 +33,43 @@ public class Main {
      * Core Java
      * Today is not a Holiday
      * 
+     * 
      */
-
-    SuperDepartment adminDepartmentObject = new AdminDepartment();
-    HrDepartment hrDepartmentObject = new HrDepartment();
-    TechDepartment techDepartmentObject = new TechDepartment();
-
-    displayDepartment(adminDepartmentObject);
-    System.out.println(adminDepartmentObject.getTodaysWork());
-    System.out.println(adminDepartmentObject.getWorkDeadline());
-    System.out.println(adminDepartmentObject.isTodayAHoliday());
-    System.out.println();
-
-    displayDepartment(hrDepartmentObject);
-    System.out.println(hrDepartmentObject.doActivity());
-    System.out.println(hrDepartmentObject.getTodaysWork());
-    System.out.println(hrDepartmentObject.getWorkDeadline());
-    System.out.println(hrDepartmentObject.isTodayAHoliday());
-    System.out.println();
-
-    displayDepartment(techDepartmentObject);
-    System.out.println(techDepartmentObject.getTodaysWork());
-    System.out.println(techDepartmentObject.getWorkDeadline());
-    System.out.println(techDepartmentObject.getTechStackInformation());
-    System.out.println(techDepartmentObject.isTodayAHoliday());
+    
+    // Create a list to store the departments
+    List<SuperDepartment> departmentList = new ArrayList<>(3);
+    
+    // Add the departments to the list
+    departmentList.add(new AdminDepartment());
+    departmentList.add(new HrDepartment());
+    departmentList.add(new TechDepartment());
+    
+    // Iterate through the department list
+    for (SuperDepartment department : departmentList) {
+      // Display the department name
+      displayDepartment(department);
+      
+      // Check if the department is of type HrDepartment
+      if (department instanceof HrDepartment) {
+        // Cast the department to HrDepartment and call the doActivity method
+        System.out.println(((HrDepartment) department).doActivity());
+      }
+      
+      // Print the today's work and work deadline
+      System.out.println(department.getTodaysWork());
+      System.out.println(department.getWorkDeadline());
+      
+      // Check if the department is of type TechDepartment
+      if (department instanceof TechDepartment) {
+        // Cast the department to TechDepartment and call the getTechStackInformation method
+        System.out.println(((TechDepartment) department).getTechStackInformation());
+      }
+      
+      // Print if today is a holiday or not
+      System.out.println(department.isTodayAHoliday());
+      
+      // Print a new line for separation
+      System.out.println();
+    }
   }
-
 }
