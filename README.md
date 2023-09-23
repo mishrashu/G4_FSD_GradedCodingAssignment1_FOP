@@ -81,6 +81,6 @@ You should see the expected output printed to the console.
 ## Contributor
 ```bash
    https://github.com/khardiashab/
-   https://github.com/yourusername/
+   https://github.com/mishrashu/
    https://github.com/yourusername/
    https://github.com/yourusername/
