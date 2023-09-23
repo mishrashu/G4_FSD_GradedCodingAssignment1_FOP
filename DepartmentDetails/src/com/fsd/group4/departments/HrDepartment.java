@@ -14,7 +14,7 @@ public class HrDepartment extends SuperDepartment implements IDoActivity {
 
   @Override
   public String departmentName() {
-    return "Hr Department ";
+    return "HR Department ";
   }
 
   @Override
@@ -29,7 +29,7 @@ public class HrDepartment extends SuperDepartment implements IDoActivity {
 
   @Override
   public String doActivity() {
-    return "team Lunch";
+    return "Team Lunch";
   }
 
 }
